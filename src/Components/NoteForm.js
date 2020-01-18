@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 import "./NoteForm.css";
 
 function NoteForm() {
+  //인풋 데이터 값을 useState를 사용해서 상태값을 관리
   const [newNoteTitle, setNewNoteTitle] = React.useState();
   const [newNoteTask, setNewNoteTask] = React.useState();
   const [newNotePlace, setNewNotePlace] = React.useState();
 
+  //FireStore 데이터 생성 시간을 Timestamp로 생성
   const newND = firebase.firestore.Timestamp.fromDate(new Date());
 
+  // FireStore 문서 필드 값에 State 값 설정
   const newNote = {
     title: newNoteTitle,
     task: newNoteTask,
@@ -17,9 +20,12 @@ function NoteForm() {
     createAt: newND
   };
 
+  //onClick 이벤트 발생하면 newNote 값을 FireStore에 전송
   const handleAddNote = () => {
     const db = firebase.firestore();
     const dbRef = db.collection("noteapp");
+    //FireStore collection 문서에 데이터 추가
+    //Try,Catch로 정상 실행과 에러 실행을 구분
     try {
       dbRef.add(newNote);
       console.log("노트 추가 성공");

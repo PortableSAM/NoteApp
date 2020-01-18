@@ -4,6 +4,7 @@ import firebase from "./Fire/Fire_Config";
 function Note({ id, title, task, place, date }) {
   const onDelete = () => {
     const db = firebase.firestore();
+    //FireStore collection에서 문서 ID 참조 후 삭제
     const dbRef = db.collection("noteapp").doc(id);
     dbRef.delete();
   };
