@@ -47,6 +47,7 @@
   border: none;
   border-bottom: 1px solid gray;
   background: none;
+  outline: none;
 }
 .form-item label {
   letter-spacing: 2px;
@@ -61,4 +62,20 @@
   padding-left: 10px;
   padding-right: 10px;
   text-decoration: none;
+}
+.form-btn button {
+  outline: none;
+}
+
+@media screen and (max-width: 450px) {
+  .form {
+    margin-top: 70px;
+    width: 400px;
+  }
+  .form-title h3 {
+    width: 70%;
+  }
+  .form-container {
+    width: 400px;
+  }
 }

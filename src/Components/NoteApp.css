@@ -36,7 +36,7 @@
   margin-top: 15px;
   padding-left: 20px;
   width: 90%;
-  height: 110px;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -52,6 +52,9 @@
 .del-btn {
   padding-right: 20px;
   align-self: center;
+}
+button {
+  outline: none;
 }
 
 @media screen and (max-width: 450px) {
