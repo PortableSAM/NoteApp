@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import Note from "./Note";
-import NoteForm from "./NoteForm";
-import "./NoteApp.css";
+import { Link } from "react-router-dom";
 import firebase from "./Fire/Fire_Config";
+import Note from "./Note";
+import "./NoteApp.css";
 
 function NoteApp() {
   const [note, setNote] = React.useState([]);
@@ -46,7 +46,9 @@ function NoteApp() {
         ))}
       </div>
       <div className="App-footer">
-        <NoteForm />
+        <Link to="/create">
+          <button className="btn btn-outline-success">Add Note</button>
+        </Link>
       </div>
     </Container>
   );

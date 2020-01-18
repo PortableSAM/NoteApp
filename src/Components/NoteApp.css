@@ -2,7 +2,7 @@
   justify-content: center;
 }
 .col-sm-auato {
-  background: #e1a6e1;
+  background: #e1a6e16b;
   border-radius: 10px;
 }
 
@@ -27,17 +27,16 @@
   justify-content: flex-start;
   align-items: center;
   background: #efefff;
-}
-.App-footer {
-  width: 500px;
-  margin: 5px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .note-container {
   margin-top: 15px;
   padding-left: 20px;
   width: 90%;
-  height: 25%;
+  height: 110px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,7 +45,22 @@
   border-radius: 10px;
   text-align: start;
 }
+.note-item h3 {
+  font-size: 1em;
+}
+
 .del-btn {
   padding-right: 20px;
   align-self: center;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 360px;
+    margin-top: 15px;
+  }
+  .warpper-container {
+    width: 360px;
+    height: 560px;
+  }
 }
